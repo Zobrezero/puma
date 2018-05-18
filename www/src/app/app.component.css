@@ -1,0 +1,40 @@
+/* Sidenav de la misma altura que la ventana */
+mat-sidenav-container
+{
+	height:100vh;
+}
+
+mat-sidenav
+{
+	max-width: 500px;
+	background-color: #c3c3c3;
+}
+
+/* centrar el logo */
+.content
+{
+	text-align: center;
+	background-color: #FFFFFF;
+}
+
+
+
+mat-nav-list
+{
+	margin-bottom: 15px;
+	background-color: #d5d5d5;
+}
+
+mat-nav-list h2
+{
+	background-color: white;
+}
+
+.example-fill-remaining-space
+{
+	/*
+	This fills the remaining space, by using flexbox.
+	Every toolbar row uses a flexbox row layout.
+	*/
+	flex: 1 1 auto;
+}

@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Puma webpage';
+  title  = 'Puma webpage';
+  folder = {
+  	name: 'nombre de la carpeta',
+  	update: 'el otro día'
+  };
 }
