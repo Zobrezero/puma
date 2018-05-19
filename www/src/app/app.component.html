@@ -158,14 +158,14 @@
   </mat-menu>
 
   <mat-menu #appMenu="matMenu">
-  <button mat-menu-item>Settings</button>
-  <button mat-menu-item>Help</button>
-</mat-menu>
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Help</button>
+  </mat-menu>
 
-<button mat-icon-button [matMenuTriggerFor]="appMenu">
-  <!-- <mat-icon>more_vert</mat-icon> -->
+  <button mat-mini-fab [matMenuTriggerFor]="appMenu">
+    <!-- <mat-icon>more_vert</mat-icon> -->
 
-  <i class="material-icons">face</i>
-</button>
+    <i class="material-icons">send</i>
+  </button>
 
 </mat-sidenav-container>
