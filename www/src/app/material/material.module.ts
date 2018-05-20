@@ -17,8 +17,8 @@ import {
   MatIconRegistry,
   MatIconBase,
 } from '@angular/material';
-import { MaterialComponent } from './material.component';
 
+import { MaterialComponent } from './material.component';
 
 @NgModule({
   declarations: [MaterialComponent],

@@ -7,6 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title  = 'Puma webpage';
+  description = 'proyecto para puma hecho por mí';
   folder = {
   	name: 'nombre de la carpeta',
   	update: 'el otro día'
