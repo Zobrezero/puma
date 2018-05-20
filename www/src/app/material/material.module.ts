@@ -17,10 +17,11 @@ import {
   MatIconRegistry,
   MatIconBase,
 } from '@angular/material';
+import { MaterialComponent } from './material.component';
 
 
 @NgModule({
-  declarations: [],
+  declarations: [MaterialComponent],
   imports: [
     CommonModule,
     // importar dentro del modulo
