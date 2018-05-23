@@ -14,6 +14,3 @@
 Route::get('/', function () {
     return view('welcome');
 });
-
-Route::get('sms',  'SmsController@show');
-Route::get('send', 'SmsController@send');
