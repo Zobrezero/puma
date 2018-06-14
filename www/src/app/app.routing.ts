@@ -1,8 +1,4 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
-import { AppComponent } from './app.component';
-import { routing } from './app.routing';
+import { RouterModule, Routes } from '@angular/router';
 
 import { HomepageComponent } from './homepage/homepage.component';
 import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
@@ -28,53 +24,31 @@ import { PromotionListComponent } from './promotion-list/promotion-list.componen
 import { PromotionAddComponent } from './promotion-add/promotion-add.component';
 import { PromotionEditComponent } from './promotion-edit/promotion-edit.component';
 import { PromotionViewComponent } from './promotion-view/promotion-view.component';
-import { AdminLoginComponent } from './admin-login/admin-login.component';
-import { ClientLoginComponent } from './client-login/client-login.component';
-import { ConfsComponent } from './confs/confs.component';
-import { PagesComponent } from './pages/pages.component';
-import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
+const routes: Routes = [
+  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: 'homepage', component: HomepageComponent},
+  { path: 'adminhomepage', component: AdminHomepageComponent},
+  { path: 'clienthomepage', component: ClientHomepageComponent},
+  { path: 'catalogue', component: CatalogueComponent},
+  { path: 'repairadd', component: RepairAddComponent},
+  { path: 'repairedit', component: RepairEditComponent},
+  { path: 'repairlist', component: RepairListComponent},
+  { path: 'repairview', component: RepairViewComponent},
+  { path: 'productadd', component: ProductAddComponent},
+  { path: 'productedit', component: ProductEditComponent},
+  { path: 'productview', component: ProductViewComponent},
+  { path: 'productlist', component: ProductListComponent},
+  { path: 'cartadd', component: CartAddComponent},
+  { path: 'cartedit', component: CartEditComponent},
+  { path: 'cartlist', component: CartListComponent},
+  { path: 'promotionlist', component: PromotionListComponent},
+  { path: 'promotionadd', component: PromotionAddComponent},
+  { path: 'promotionedit', component: PromotionEditComponent},
+  { path: 'promotionview', component: PromotionViewComponent},
 
-@NgModule({
-  declarations: [
-    AppComponent,
+  // otherwise redirect to home
+  { path: '**', redirectTo: '' }
+];
 
-    HomepageComponent,
-    AdminHomepageComponent,
-    ClientHomepageComponent,
-
-    CatalogueComponent,
-
-    RepairAddComponent,
-    RepairEditComponent,
-    RepairListComponent,
-    RepairViewComponent,
-
-    ProductAddComponent,
-    ProductEditComponent,
-    ProductListComponent,
-    ProductViewComponent,
-
-    CartAddComponent,
-    CartEditComponent,
-    CartListComponent,
-
-    PromotionListComponent,
-    PromotionAddComponent,
-    PromotionEditComponent,
-    PromotionViewComponent,
-    AdminLoginComponent,
-    ClientLoginComponent,
-    ConfsComponent,
-    PagesComponent,
-    TermsConditionsComponent,
-
-  ],
-  imports: [
-    BrowserModule,
-    routing,
-  ],
-  providers: [],
-  bootstrap: [AppComponent]
-})
-export class AppModule { }
+export const routing = RouterModule.forRoot(routes);
