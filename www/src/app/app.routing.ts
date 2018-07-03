@@ -1,51 +1,82 @@
 import { RouterModule, Routes } from '@angular/router';
 
 import { HomepageComponent } from './homepage/homepage.component';
-import { AdminHomepageComponent } from './admin-homepage/admin-homepage.component';
-import { ClientHomepageComponent } from './client-homepage/client-homepage.component';
+
+import { AdminHomepageComponent } from './admin/homepage.component';
+import { AdminLoginComponent } from './admin/login.component';
+import { AdminAddComponent } from './admin/add.component';
+import { AdminEditComponent } from './admin/edit.component';
+import { AdminListComponent } from './admin/list.component';
+
+import { ClientHomepageComponent } from './client/homepage.component';
+import { ClientLoginComponent } from './client/login.component';
+import { ClientAddComponent } from './client/add.component';
+import { ClientEditComponent } from './client/edit.component';
+import { ClientListComponent } from './client/list.component';
+
+import { RepairAddComponent } from './repair/add.component';
+import { RepairEditComponent } from './repair/edit.component';
+import { RepairListComponent } from './repair/list.component';
+import { RepairViewComponent } from './repair/view.component';
+
+import { ProductAddComponent } from './product/add.component';
+import { ProductEditComponent } from './product/edit.component';
+import { ProductViewComponent } from './product/view.component';
+import { ProductListComponent } from './product/list.component';
+
+import { CartAddComponent } from './cart/add.component';
+import { CartEditComponent } from './cart/edit.component';
+import { CartListComponent } from './cart/list.component';
+
+import { PromotionListComponent } from './promotion/list.component';
+import { PromotionAddComponent } from './promotion/add.component';
+import { PromotionEditComponent } from './promotion/edit.component';
+import { PromotionViewComponent } from './promotion/view.component';
 
 import { CatalogueComponent } from './catalogue/catalogue.component';
 
-import { RepairAddComponent } from './repair-add/repair-add.component';
-import { RepairEditComponent } from './repair-edit/repair-edit.component';
-import { RepairListComponent } from './repair-list/repair-list.component';
-import { RepairViewComponent } from './repair-view/repair-view.component';
+import { ConfsComponent } from './confs/confs.component';
 
-import { ProductAddComponent } from './product-add/product-add.component';
-import { ProductEditComponent } from './product-edit/product-edit.component';
-import { ProductViewComponent } from './product-view/product-view.component';
-import { ProductListComponent } from './product-list/product-list.component';
+import { PagesComponent } from './pages/pages.component';
 
-import { CartAddComponent } from './cart-add/cart-add.component';
-import { CartEditComponent } from './cart-edit/cart-edit.component';
-import { CartListComponent } from './cart-list/cart-list.component';
-
-import { PromotionListComponent } from './promotion-list/promotion-list.component';
-import { PromotionAddComponent } from './promotion-add/promotion-add.component';
-import { PromotionEditComponent } from './promotion-edit/promotion-edit.component';
-import { PromotionViewComponent } from './promotion-view/promotion-view.component';
+import { TermsConditionsComponent } from './terms-conditions/terms-conditions.component';
 
 const routes: Routes = [
-  { path: '', redirectTo: '/', pathMatch: 'full' },
+  { path: '', redirectTo: '/homepage', pathMatch: 'full' },
   { path: 'homepage', component: HomepageComponent},
-  { path: 'adminhomepage', component: AdminHomepageComponent},
-  { path: 'clienthomepage', component: ClientHomepageComponent},
   { path: 'catalogue', component: CatalogueComponent},
-  { path: 'repairadd', component: RepairAddComponent},
-  { path: 'repairedit', component: RepairEditComponent},
-  { path: 'repairlist', component: RepairListComponent},
-  { path: 'repairview', component: RepairViewComponent},
-  { path: 'productadd', component: ProductAddComponent},
-  { path: 'productedit', component: ProductEditComponent},
-  { path: 'productview', component: ProductViewComponent},
-  { path: 'productlist', component: ProductListComponent},
-  { path: 'cartadd', component: CartAddComponent},
-  { path: 'cartedit', component: CartEditComponent},
-  { path: 'cartlist', component: CartListComponent},
-  { path: 'promotionlist', component: PromotionListComponent},
-  { path: 'promotionadd', component: PromotionAddComponent},
-  { path: 'promotionedit', component: PromotionEditComponent},
-  { path: 'promotionview', component: PromotionViewComponent},
+  { path: 'termsconditions', component: TermsConditionsComponent},
+
+  { path: 'admin-homepage', component: AdminHomepageComponent},
+  { path: 'admin-login', component: AdminLoginComponent},
+  { path: 'admin-add', component: AdminAddComponent },
+  { path: 'admin-edit', component: AdminEditComponent },
+  { path: 'admin-list', component: AdminListComponent },
+
+  { path: 'client-homepage', component: ClientHomepageComponent},
+  { path: 'client-login', component: ClientLoginComponent},
+  { path: 'client-add', component: ClientAddComponent },
+  { path: 'client-edit', component: ClientEditComponent },
+  { path: 'client-list', component: ClientListComponent },
+
+  { path: 'repair-add', component: RepairAddComponent},
+  { path: 'repair-edit', component: RepairEditComponent},
+  { path: 'repair-list', component: RepairListComponent},
+  { path: 'repair-view', component: RepairViewComponent},
+
+  { path: 'product-add', component: ProductAddComponent},
+  { path: 'product-edit', component: ProductEditComponent},
+  { path: 'product-view', component: ProductViewComponent},
+  { path: 'product-list', component: ProductListComponent},
+
+  { path: 'cart-add', component: CartAddComponent},
+  { path: 'cart-edit', component: CartEditComponent},
+  { path: 'cart-list', component: CartListComponent},
+
+  { path: 'promotion-list', component: PromotionListComponent},
+  { path: 'promotion-add', component: PromotionAddComponent},
+  { path: 'promotion-edit', component: PromotionEditComponent},
+  { path: 'promotion-view', component: PromotionViewComponent},
 
   // otherwise redirect to home
   { path: '**', redirectTo: '' }

@@ -1,1 +1,55 @@
-<router-outlet></router-outlet>
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+    <mat-nav-list dense>
+      <h2 mdSubheader>Listado de pantallas:</h2>
+      <a mat-list-item href="/"><mat-icon>home</mat-icon></a>
+      <!-- <a mat-list-item href="/catalogue">Catalogue</a> -->
+      <!-- <a mat-list-item href="/termsconditions">TermsConditions</a> -->
+      <mat-divider></mat-divider>
+      <a mat-list-item href="/admin-homepage">Homepage Administrador</a>
+      <a mat-list-item href="/admin-login">Login Administrador</a>
+      <a mat-list-item href="/admin-add">Agregar Administrador</a>
+      <a mat-list-item href="/admin-edit">Editar Administrador</a>
+      <a mat-list-item href="/admin-list">Listado de Administradores</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="/client-homepage">Homepage de Cliente</a>
+      <a mat-list-item href="/client-login">Login de Cliente</a>
+      <a mat-list-item href="/client-add">Agregar Cliente</a>
+      <a mat-list-item href="/client-edit">Editar Cliente</a>
+      <a mat-list-item href="/client-list">Listado de Clientes</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="/repair-add">Agregar Reparación</a>
+      <a mat-list-item href="/repair-edit">Editar Reparación</a>
+      <a mat-list-item href="/repair-list">Listado de Reparaciones</a>
+      <a mat-list-item href="/repair-view">Ver Reparación</a>
+      <mat-divider></mat-divider>
+      <a mat-list-item href="/product-add">Agregar Producto</a>
+      <a mat-list-item href="/product-edit">Editar Producto</a>
+      <a mat-list-item href="/product-list">Listado de Productos</a>
+      <a mat-list-item href="/product-view">Ver Producto</a>
+      <!-- <mat-divider></mat-divider> -->
+      <!-- <a mat-list-item href="/cart-add">Agregar Carrito</a> -->
+      <!-- <a mat-list-item href="/cart-edit">Editar Carrito</a> -->
+      <!-- <a mat-list-item href="/cart-list">Listado de Carrito</a> -->
+      <!-- <mat-divider></mat-divider> -->
+      <!-- <a mat-list-item href="/promotion-list">Listado de Promoción</a> -->
+      <!-- <a mat-list-item href="/promotion-add">Agregar Promoción</a> -->
+      <!-- <a mat-list-item href="/promotion-edit">Editar Promoción</a> -->
+      <!-- <a mat-list-item href="/promotion-view">Ver Promoción</a> -->
+    </mat-nav-list>
+  </mat-sidenav>
+
+  <!-- <mat-toolbar> -->
+  <mat-toolbar color="primary" class="mat-elevation-z6">
+  <!-- <mat-toolbar color="accent"> -->
+  <!-- <mat-toolbar color="warn"> -->
+    <!-- <mat-toolbar-row> -->
+    <mat-toolbar-row>
+      <button type="button" mat-button (click)="sidenav.open()">
+        <mat-icon>more_vert</mat-icon>
+      </button>
+      <span>Proyecto PUMA</span>
+    </mat-toolbar-row>
+  </mat-toolbar>
+  <router-outlet></router-outlet>
+</mat-sidenav-container>
