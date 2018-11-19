@@ -1,5 +1,3 @@
-USE 'puma';
-
 CREATE USER 'puma_admin'@'localhost' IDENTIFIED BY 'puma_admin_password';
 GRANT ALL PRIVILEGES ON puma . * TO 'puma_admin'@'localhost';
 
