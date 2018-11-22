@@ -7,9 +7,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductAddComponent implements OnInit {
 
+	//https://angular.io/guide/forms
   constructor() { }
 
   ngOnInit() {
   }
 
+  onSubmit()
+  {
+  	console.log("acá andamos");
+  }
 }
