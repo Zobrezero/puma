@@ -10,9 +10,20 @@ class ProductController extends Controller
 {
     public function index()
     {
-        $products = DB::table('productos')->get();
+        $res = [];
+        $products = DB::table('productos')->select('*')->get();
 
-        return  response()->json(['products' => $products]);
+        foreach ($products as $value)
+        {
+            $res[] =
+            [
+                "name"  => $value->prod_name,
+                "desc"  => $value->prod_description,
+                "stock" => $value->prod_stock,
+                "price" => $value->prod_price
+            ];
+        }
+        return  response()->json(['products' => $res]);
     }
  
     public function show($id)
@@ -22,7 +33,18 @@ class ProductController extends Controller
 
     public function store(Request $request)
     {
-        return  response()->json('store');
+        if ($request->request->get("name") && $request->request->get("desc") && $request->request->get("stock") && $request->request->get("price"))
+        {
+            $response = DB::table('productos')->insert(
+            [
+                'prod_name' => $request->request->get("name"),
+                'prod_description' => $request->request->get("desc"),
+                'prod_stock' => $request->request->get("stock"),
+                'prod_price' => $request->request->get("price")
+            ]);
+            return  response()->json('ok');
+        }
+        return  response()->json('notok');
     }
 
     public function update(Request $request, $id)

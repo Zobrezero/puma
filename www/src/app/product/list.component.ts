@@ -8,20 +8,23 @@ import reqwest from 'reqwest';
 })
 export class ProductListComponent implements OnInit
 {
-	private listado = [];
+	public products = [];
 
 	constructor()
   {
-  	reqwest(
-  	{
-  	  url: 'http://localhost/puma-server/api/products',
+    reqwest(
+    {
+      url: 'http://localhost/puma-server/api/products',
       method: 'get',
       success: (resp) =>
       {
-	      this.listado = resp;
+        this.products = resp.products;
+        console.log(this.products);
       }
-  	})
-	}
+    })
+  }
+
   ngOnInit()
-  {}
+  {
+  }
 }
